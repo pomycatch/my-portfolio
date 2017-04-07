@@ -1,0 +1,27 @@
+@mixin flex{
+	display: flex;
+}
+
+@mixin column{
+	flex-direction: column;
+}
+
+@mixin row{
+	flex-direction: row;
+}
+
+@mixin wrap{
+	flex-wrap: wrap;
+}
+
+@mixin nowrap{
+	flex-wrap: nowrap;
+}
+
+@mixin hide{
+	display: none;
+}
+
+@mixin show{
+	display: block;
+}

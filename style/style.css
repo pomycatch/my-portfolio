@@ -1,0 +1,140 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 10px;
+  background-color: #414141; }
+
+.logo {
+  display: none; }
+  .logo h1 {
+    font-size: 28px;
+    color: #f5f5f5; }
+
+nav {
+  margin-top: 30px; }
+  nav ul li {
+    display: inline;
+    margin: 0 20px;
+    list-style-type: none; }
+    nav ul li a {
+      font-size: 18px;
+      color: #f5f5f5;
+      text-decoration: none; }
+      nav ul li a:hover {
+        color: #c2c2c2; }
+
+.about-me {
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f5f5;
+  height: 800px;
+  padding: 40px 10px;
+  color: #6a6a6a; }
+  .about-me .my-photo {
+    order: 2;
+    text-align: center; }
+    .about-me .my-photo img {
+      height: 300px; }
+  .about-me .description {
+    order: 1;
+    text-align: center; }
+    .about-me .description p {
+      line-height: 20px; }
+      .about-me .description p:last-of-type {
+        text-align: justify; }
+    .about-me .description h2 {
+      margin: 6px 0px 12px;
+      font-size: 32px;
+      font-weight: 600;
+      color: #414141; }
+    .about-me .description .button-wrapper {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      margin: 20px 0px 40px; }
+      .about-me .description .button-wrapper button {
+        padding: 16px 40px;
+        font-size: 18px;
+        background-color: inherit;
+        border: 1px solid #414141;
+        color: #f5f5f5;
+        background-color: #414141;
+        font-weight: 700;
+        transition: .3s all; }
+        .about-me .description .button-wrapper button:hover {
+          background-color: inherit;
+          border: 1px solid #414141;
+          color: #414141;
+          cursor: pointer; }
+
+/* Styles for tablets */
+@media only screen and (min-width: 992px) {
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 16px 100px; }
+
+  .logo {
+    display: block; }
+
+  nav {
+    margin-top: 0px; }
+
+  .about-me {
+    flex-direction: row;
+    padding: 0px 100px 0px; }
+    .about-me .my-photo {
+      order: 1;
+      padding-top: 50px; }
+      .about-me .my-photo img {
+        height: 500px; }
+    .about-me .description {
+      order: 2;
+      margin-left: 140px;
+      padding-top: 120px; } }
+
+/*# sourceMappingURL=style.css.map */
