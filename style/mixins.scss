@@ -25,3 +25,30 @@
 @mixin show{
 	display: block;
 }
+
+@mixin section-headers{
+	//font-family: 
+	font-size: 28px;
+	margin-bottom: 40px;
+	text-align: center;
+}
+
+@mixin smallest-padding{
+	padding: 50px 20px;
+}
+
+@mixin phone-padding{
+	padding: 50px;
+}
+
+@mixin tablet-padding{
+	padding: 50px 100px;
+}
+
+@mixin desktop-padding{
+	padding: 50px 160px;
+}
+
+@mixin large-desktop-padding{
+	padding: 50px 260px;
+}

@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Szymon Pomykacz - Frontend Developer</title>
 	<link rel="stylesheet" href="style/style.css">
+	<link rel="stylesheet" href="css/fontello.css">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
 
@@ -24,18 +26,34 @@
 	</header>
 
 	<section class="about-me">
-		<div class="my-photo">
-			<img src="img/me.png" alt="My photo" />
-		</div>
 		<div class="description">
-			<p>Nazywam się</p>
-			<h2>Szymon Pomykacz</h2>
+			<h2>Front End Developer</h2>
 			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Placeat id minus, incidunt accusantium eius, repellendus unde laudantium reprehenderit vero laborum perspiciatis optio tempore, voluptate quo officiis neque accusamus fugiat corporis.</p>
 			<div class="button-wrapper">
 				<button type="button">Portfolio</button>
 				<button type="button">Kontakt</button>
 			</div>
 		</div>
+		<div class="my-photo">
+			<img src="img/me.png" alt="My photo" />
+		</div>
+	</section>
+
+	<section class="contact-me">
+		<h3>Kontakt</h3>
+<!-- 		<div class="wrapper-contact-icons">
+			<span class="fa fa-envelope" aria-hidden="true"><a href="mailto:kontakt@szymonpomykacz.pl">info@szymonpomykacz.pl</a></span>
+			<span class="fa fa-phone" aria-hidden="true">886482523</span>
+		</div> -->
+
+		<form method="post">
+			<div class="wrapper-contact-inputs">
+				<input type="text" placeholder="Imię"/>
+				<input type="text" placeholder="E-mail">
+			</div>
+			<textarea rows="5" placeholder="Wiadomość"></textarea>
+			<button type="submit">Wyślij</button>
+		</form>
 	</section>
 
 </body>
