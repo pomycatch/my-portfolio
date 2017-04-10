@@ -41,6 +41,7 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/* Mobile First */
 header {
   display: flex;
   flex-direction: column;
@@ -64,6 +65,9 @@ nav ul li {
     text-decoration: none; }
     nav ul li a:hover {
       color: #c2c2c2; }
+
+section {
+  padding: 50px 20px; }
 
 .about-me {
   display: flex;
@@ -109,54 +113,74 @@ nav ul li {
           color: #414141;
           cursor: pointer; }
 
-section {
-  padding: 50px 20px; }
+.more-about-me {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 20px;
+  background-color: #414141; }
+  .more-about-me span {
+    margin: 0px 30px;
+    font-size: 26px; }
 
-.contact-me {
+.portfolio {
+  height: 600px; }
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: #999; }
+  .contact-info .contact-message {
+    display: none; }
+  .contact-info .contact-email {
+    margin-bottom: 20px; }
+  .contact-info .contact-email, .contact-info .contact-phone {
+    text-align: center; }
+    .contact-info .contact-email a, .contact-info .contact-phone a {
+      font-size: 18px;
+      color: #414141;
+      text-decoration: none; }
+    .contact-info .contact-email span, .contact-info .contact-phone span {
+      font-size: 18px;
+      color: #414141; }
+    .contact-info .contact-email .fa-envelope:before, .contact-info .contact-phone .fa-envelope:before {
+      margin-right: 10px;
+      color: #414141;
+      font-size: 18px; }
+    .contact-info .contact-email .fa-phone:before, .contact-info .contact-phone .fa-phone:before {
+      margin-right: 10px;
+      color: #414141;
+      font-size: 20px; }
+
+.contact-form {
   display: flex;
   flex-direction: column; }
-  .contact-me h3 {
+  .contact-form h3 {
     font-size: 28px;
     margin-bottom: 40px;
     text-align: center; }
-  .contact-me .wrapper-contact-icons {
-    display: flex;
-    flex-direction: column;
-    margin: 30px 0px;
-    text-align: center; }
-    .contact-me .wrapper-contact-icons span {
-      text-align: left;
-      color: #414141;
-      margin-bottom: 40px; }
-    .contact-me .wrapper-contact-icons .fa-envelope:before, .contact-me .wrapper-contact-icons .fa-phone:before {
-      font-size: 22px;
-      padding: 12px;
-      margin-right: 10px;
-      border: 1px solid #414141;
-      border-radius: 90px; }
-    .contact-me .wrapper-contact-icons a {
-      color: #414141;
-      text-decoration: none; }
-  .contact-me form {
+  .contact-form form {
     display: flex;
     flex-direction: column; }
-    .contact-me form .wrapper-contact-inputs {
+    .contact-form form .wrapper-contact-inputs {
       display: flex;
       flex-direction: column; }
-    .contact-me form input, .contact-me form textarea {
+    .contact-form form input, .contact-form form textarea {
       margin-bottom: 12px;
       padding: 12px;
       font-size: 14px; }
-    .contact-me form textarea {
+    .contact-form form textarea {
       resize: none; }
-    .contact-me form button {
+    .contact-form form button {
       padding: 12px 0px;
       font-size: 14px;
       background-color: inherit;
       color: #a9a9a9;
       border: 1px solid #a9a9a9;
       transition: .3s all; }
-      .contact-me form button:hover {
+      .contact-form form button:hover {
         background-color: #a9a9a9;
         color: #fff;
         cursor: pointer; }
@@ -171,6 +195,9 @@ section {
   .logo {
     display: block; }
 
+  section {
+    padding: 50px; }
+
   .about-me {
     flex-direction: row;
     padding: 50px 50px 0px; }
@@ -183,20 +210,30 @@ section {
       .about-me .description .button-wrapper {
         justify-content: flex-start; }
 
-  section {
-    padding: 50px; }
+  .more-about-me {
+    justify-content: center; }
+    .more-about-me span {
+      font-size: 38px;
+      margin: 0px 30px; }
 
-  .contact-me .wrapper-contact-icons {
-    flex-direction: row;
-    justify-content: space-around; }
-  .contact-me form .wrapper-contact-inputs {
+  .contact-info {
     flex-direction: row;
     justify-content: space-between; }
-    .contact-me form .wrapper-contact-inputs input {
+    .contact-info .contact-message {
+      display: block;
+      font-size: 18px;
+      text-align: center; }
+    .contact-info .contact-email {
+      margin-bottom: 0px; }
+
+  .contact-form form .wrapper-contact-inputs {
+    flex-direction: row;
+    justify-content: space-between; }
+    .contact-form form .wrapper-contact-inputs input {
       width: 45%; }
-  .contact-me form input, .contact-me form textarea {
+  .contact-form form input, .contact-form form textarea {
     margin-bottom: 16px; }
-  .contact-me form button {
+  .contact-form form button {
     width: 30%;
     margin: 0 auto; } }
 /* Styles for tablets */
@@ -204,19 +241,22 @@ section {
   header {
     padding: 16px 100px; }
 
+  section {
+    padding: 50px 100px; }
+
   .about-me {
     padding: 50px 100px 0px; }
     .about-me .description {
       padding-top: 80px; }
     .about-me .my-photo img {
-      height: 470px; }
-
-  section {
-    padding: 50px 100px; } }
+      height: 470px; } }
 /* Styles for desktops */
 @media only screen and (min-width: 1200px) {
   header {
     padding: 16px 160px; }
+
+  section {
+    padding: 50px 160px; }
 
   .about-me {
     padding: 50px 160px 0px; }
@@ -230,12 +270,15 @@ section {
     .about-me .my-photo img {
       height: 520px; }
 
-  section {
-    padding: 50px 160px; } }
+  .contact-info {
+    justify-content: space-around; } }
 /* Styles for large-desktops */
 @media only screen and (min-width: 1600px) {
   header {
     padding: 16px 260px; }
+
+  section {
+    padding: 50px 260px; }
 
   .about-me {
     padding: 50px 260px 0px; }
@@ -243,9 +286,6 @@ section {
       padding-top: 110px;
       margin-right: 150px; }
     .about-me .my-photo img {
-      height: 600px; }
-
-  section {
-    padding: 50px 260px; } }
+      height: 600px; } }
 
 /*# sourceMappingURL=style.css.map */

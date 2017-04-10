@@ -52,3 +52,8 @@
 @mixin large-desktop-padding{
 	padding: 50px 260px;
 }
+
+@mixin icon-style{
+	margin-right: 10px;
+	color: $accent-color;
+}

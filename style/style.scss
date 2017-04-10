@@ -13,6 +13,10 @@ $accent-color: #414141;
 $text-color: #6a6a6a;
 
 
+
+
+/* Mobile First */
+
 header{
 	@include flex;
 	@include column;
@@ -35,7 +39,6 @@ nav{
 			display: inline;
 			margin: 0 20px;
 			list-style-type: none;
-
 			a{
 				font-size: 18px;
 				color: $menu-link;
@@ -46,6 +49,11 @@ nav{
 			}
 		}
 	}
+}
+
+
+section{
+	@include smallest-padding;
 }
 
 
@@ -61,7 +69,6 @@ nav{
 			height: 300px;
 		}
 	}
-
 	.description{
 		text-align: center;
 		h2{
@@ -105,37 +112,64 @@ nav{
 	}
 }
 
-section{
-	@include smallest-padding;
+
+.more-about-me{
+	@include flex;
+	@include row;
+	justify-content: center;
+	padding: 20px;
+	background-color: $accent-color;
+	span{
+		margin: 0px 30px;
+		font-size: 26px;
+	}
 }
 
-.contact-me{
+.portfolio{
+	height: 600px;
+}
+
+.contact-info{
+	@include flex;
+	@include column;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #999;
+	.contact-message{
+		@include hide;
+	}
+	.contact-email{
+		margin-bottom: 20px;
+	}
+	.contact-email, .contact-phone{
+		text-align: center;
+		a{
+			font-size: 18px;
+			color: $accent-color;
+			text-decoration: none;
+		}
+		span{
+			font-size: 18px;
+			color: $accent-color;
+		}
+		.fa-envelope:before{
+			@include icon-style;
+			font-size: 18px;
+		}
+		.fa-phone:before{
+			@include icon-style;
+			font-size: 20px;
+		}
+	}
+}
+
+
+
+.contact-form{
 	@include flex;
 	@include column;
 	h3{
 		@include section-headers;
-	}
-	.wrapper-contact-icons{
-		@include flex;
-		@include column;
-		margin: 30px 0px;
-		text-align: center;
-		span{
-			text-align: left;
-			color: $accent-color;
-			margin-bottom: 40px;
-		}
-		.fa-envelope:before, .fa-phone:before{
-			font-size: 22px;
-			padding: 12px;
-			margin-right: 10px;
-			border: 1px solid $accent-color;
-			border-radius: 90px;
-		}
-		a{
-			color: $accent-color;
-			text-decoration: none;
-		}	
 	}
 
 	form{
@@ -186,11 +220,14 @@ section{
 		@include show;
 	}
 
+	section{
+		@include phone-padding;
+	}
+
 	.about-me{
 		@include row;
 		padding: 50px 50px 0px;
 		.my-photo{
-			
 			img{
 				height: 430px;
 			}
@@ -205,16 +242,29 @@ section{
 			}
 		}
 	}
-	
-	section{
-		@include phone-padding;
+
+	.more-about-me{
+		justify-content: center;
+		span{
+			font-size: 38px;
+			margin: 0px 30px;
+		}
 	}
 
-	.contact-me{
-		.wrapper-contact-icons{
-			@include row;
-			justify-content: space-around;
+	.contact-info{
+		@include row;
+		justify-content: space-between;
+		.contact-message{
+			@include show;
+			font-size: 18px;
+			text-align: center;
 		}
+		.contact-email{
+			margin-bottom: 0px;
+		}
+	}
+
+	.contact-form{
 		form{
 			.wrapper-contact-inputs{
 				@include row;
@@ -242,6 +292,10 @@ section{
 		padding: 16px 100px;
 	}
 
+	section{
+		@include tablet-padding;
+	}
+
 	.about-me{
 		padding: 50px 100px 0px;
 		.description{
@@ -254,10 +308,6 @@ section{
 			}
 		}
 	}
-
-	section{
-		@include tablet-padding;
-	}
 }
 
 
@@ -268,6 +318,10 @@ section{
 @media #{$desktop}{
 	header{
 		padding: 16px 160px;
+	}
+	
+	section{
+		@include desktop-padding;
 	}
 
 	.about-me{
@@ -290,8 +344,8 @@ section{
 		}
 	}
 
-	section{
-		@include desktop-padding;
+	.contact-info{
+		justify-content: space-around;
 	}
 }
 
@@ -303,6 +357,10 @@ section{
 	header{
 		padding: 16px 260px;
 	}
+	
+	section{
+		@include large-desktop-padding;
+	}
 
 	.about-me{
 		padding: 50px 260px 0px;
@@ -311,14 +369,9 @@ section{
 			margin-right: 150px;
 		}
 		.my-photo{
-			
 			img{
 				height: 600px;
 			}
 		}
-	}
-
-	section{
-		@include large-desktop-padding;
 	}
 }
