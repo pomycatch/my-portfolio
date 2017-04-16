@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Szymon Pomykacz - Frontend Developer</title>
 	<link rel="stylesheet" href="style/style.css">
-	<link rel="stylesheet" href="css/fontello.css">
 	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
 </head>
 <body>
@@ -48,6 +47,16 @@
 
 	<section class="portfolio">
 		<h3>Portfolio</h3>
+<!-- 		<ul>
+			<li><img src="img/portfolio/1.png" alt=""></li>
+			<li><img src="img/portfolio/2.png" alt=""></li>
+			<li><img src="img/portfolio/3.png" alt=""></li>
+			<li><img src="img/portfolio/4.png" alt=""></li>
+			<li><img src="img/portfolio/1.png" alt=""></li>
+			<li><img src="img/portfolio/2.png" alt=""></li>
+			<li><img src="img/portfolio/3.png" alt=""></li>
+			<li><img src="img/portfolio/4.png" alt=""></li>
+		</ul> -->
 	</section>
 
 	<section class="contact-info">
@@ -66,15 +75,19 @@
 	<section class="contact-form">
 		<h3>Kontakt</h3>
 
-		<form method="post">
+		<form method="post" novalidate>
+		<div id="result"></div>
 			<div class="wrapper-contact-inputs">
-				<input type="text" placeholder="Imię"/>
-				<input type="text" placeholder="E-mail">
+				<input type="text" name="name" placeholder="Imię" required />
+				<input type="text" name="email" placeholder="E-mail" required />
 			</div>
-			<textarea rows="5" placeholder="Wiadomość"></textarea>
+			<textarea name="message" rows="5" placeholder="Wiadomość" required></textarea>
 			<button type="submit">Wyślij</button>
 		</form>
 	</section>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="js/form-validation.js"></script>
 
 </body>
 </html>

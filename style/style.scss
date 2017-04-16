@@ -337,7 +337,6 @@ section{
 			}
 		}
 		.my-photo{
-			
 			img{
 				height: 520px;
 			}
@@ -374,4 +373,60 @@ section{
 			}
 		}
 	}
+
+	// .portfolio{
+	// 	padding: 50px 100px;
+	// 	ul{
+	// 		@include flex;
+	// 		@include row;
+	// 		@include wrap;
+	// 		li{
+	// 			flex-basis: 25%;
+	// 			img{
+	// 				border: 3px solid #333;
+	// 				width: 350px;
+	// 			}
+	// 		}
+	// 	}
+	// }
+}
+
+.result{
+	background-color: red;
+	height: 40px;
+}
+
+.mes{
+	background-color: blue;
+	height: 40px;
+	padding: 20px;
+}
+
+.border-error{
+	border: 1px solid red;
+}
+
+
+.valid{
+	border-color: green;
+}
+
+.invalid{
+	border-color: red;
+}
+
+.form-valid, .form-invalid{
+	margin-bottom: 14px;
+	padding: 16px 10px;
+	font-weight: 600;
+}
+
+.form-valid{
+	background-color: #dff0d8;
+	color: #3c763d;
+}
+
+.form-invalid{
+	background-color: #f2dede;
+	color: #a94442;
 }

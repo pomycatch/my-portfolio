@@ -287,5 +287,35 @@ section {
       margin-right: 150px; }
     .about-me .my-photo img {
       height: 600px; } }
+.result {
+  background-color: red;
+  height: 40px; }
+
+.mes {
+  background-color: blue;
+  height: 40px;
+  padding: 20px; }
+
+.border-error {
+  border: 1px solid red; }
+
+.valid {
+  border-color: green; }
+
+.invalid {
+  border-color: red; }
+
+.form-valid, .form-invalid {
+  margin-bottom: 14px;
+  padding: 16px 10px;
+  font-weight: 600; }
+
+.form-valid {
+  background-color: #dff0d8;
+  color: #3c763d; }
+
+.form-invalid {
+  background-color: #f2dede;
+  color: #a94442; }
 
 /*# sourceMappingURL=style.css.map */
